@@ -48,7 +48,7 @@ def query_twitch(query, search):
 	buf = BytesIO()
 	c = pycurl.Curl()
 	c.setopt(c.URL, url)
-	c.setopt(c.HTTPHEADER, ['Client-ID: caozjg12y6hjop39wx996mxn585yqyk'])
+	c.setopt(c.HTTPHEADER, ['Client-ID: caozjg12y6hjop39wx996mxn585yqyk', 'Accept: application/vnd.twitchtv.v5+json'])
 	c.setopt(c.WRITEDATA, buf)
 	c.perform()
 	c.close()
