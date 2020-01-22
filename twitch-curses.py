@@ -39,7 +39,7 @@ def init_display(stdscr):
 def query_twitch(query, search):
 	if search:
 		query = urllib.parse.quote(query)
-		url = "https://api.twitch.tv/kraken/search/streams?limit="+query_limit+"&q="+query
+		url = "https://api.twitch.tv/kraken/search/streams?limit="+query_limit+"&query="+query
 	elif query == "topgames":
 		url = "https://api.twitch.tv/kraken/games/top?limit="+query_limit
 	else:
