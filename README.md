@@ -2,10 +2,10 @@ Forked from: https://gitlab.com/corbie/twitch-curses
 
 # twitch-curses
 
-Twitch-curses is a wrapper around [https://streamlink.github.io](Streamlink) for browsing and watching twitch streams.
+Twitch-curses is a wrapper around [Streamlink](https://streamlink.github.io) for browsing and watching twitch streams.
 
 ## Dependencies
-- [https://streamlink.github.io/install.html](Streamlink)
+- [Streamlink](https://streamlink.github.io/install.html)
 
 ## TODOs
 
