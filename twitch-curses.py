@@ -51,17 +51,14 @@ def query_twitch(query, search):
     else:
         query = urllib.parse.quote(query)
         url = "https://api.twitch.tv/kraken/streams?limit="+query_limit+"&game="+query
-    buf = BytesIO()
-    c = pycurl.Curl()
-    c.setopt(pycurl.SSL_VERIFYPEER, 0)
-    c.setopt(c.URL, url)
-    c.setopt(c.HTTPHEADER, ['Client-ID: caozjg12y6hjop39wx996mxn585yqyk', 'Accept: application/vnd.twitchtv.v5+json'])
-    c.setopt(c.WRITEDATA, buf)
-    c.perform()
-    c.close()
-    body = buf.getvalue()
-    buf.close()
-    return json.loads(body.decode('utf-8'))
+
+    headers = {
+        'Client-ID': 'caozjg12y6hjop39wx996mxn585yqyk',
+        'Accept':  'application/vnd.twitchtv.v5+json',
+    }
+
+    resp = requests.get(url, headers=headers)
+    return resp.json()
 
 try:
     windowsize = init_display(stdscr)
