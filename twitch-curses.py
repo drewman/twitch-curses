@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 import curses, json, pycurl, subprocess, textwrap, urllib.parse
+import curses
 from io import BytesIO
+import json
+import textwrap
+import urllib.parse
+
+import requests
 
 print("[twitch-curses] Initializing")
 stdscr = curses.initscr()
