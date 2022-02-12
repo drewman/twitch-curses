@@ -6,6 +6,7 @@ Twitch-curses is a wrapper around [Streamlink](https://streamlink.github.io) for
 
 ## Dependencies
 - [Streamlink](https://streamlink.github.io/install.html)
+- [VLC](https://www.videolan.org/vlc/) or other [support video player](https://streamlink.github.io/players.html)
 
 ## TODOs
 
